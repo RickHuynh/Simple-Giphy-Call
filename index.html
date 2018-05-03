@@ -4,21 +4,27 @@
     Practicing Ajax
   </title>
   <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="myscript.js"></script>
 </head>
+
 <body>
   <h1> Hello World! </h1>
-  <img src = "" alt="HELLO">
-</img>
-  <script>
-    $("h1").text("yes");
-    var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=2PoSXMoW84SUfK2QJ2TXYPMO93V9g2h1&limit=5");
-    xhr.done(function(data) { console.log("success got data", data);
-    console.log("first url: " + data.data[0].images.original.url);
-    $("img").attr("src",data.data[0].images.original.url);
-    });
-  </script>
+
+  <div id="buttonsArea">WHAT</div>
+
+  <!-- form -->
+  <form id="target">
+    <label for="search-input">Add in your search!</label><br>
+    <input type="text" id="category"><br>
+    <input type="submit" value="Submit" id="submit">
+  </form>
+
+  <div id="searches"></div>
+
+  <img src = "" alt="HELO"></img>
 </body>
+
 </html>
